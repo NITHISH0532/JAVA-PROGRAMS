@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   String str="malayalam";
+	   if(isPalin(str)){
+	       System.out.println("True");
+	   }
+	   else{
+	       System.out.println("False");
+	   }
+	}
+	
+	public static boolean isPalin(String str){
+	   int c[]=new int[26];
+	   int index=0;
+	   int count=0;
+	
+	  for(char ch:str.toCharArray()){
+	      if(Character.isLetter(ch)){
+	           index=Character.toLowerCase(ch)-'a';
+	           c[index]++;
+	           if(c[index]%2==1){
+	               count++;
+	           }else{
+	           count--;
+	           }
+	      }
+	  }
+	    return count<=1;
+	}
+}
