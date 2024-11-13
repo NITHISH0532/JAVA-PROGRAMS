@@ -1,0 +1,12 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String str = "Nithish";
+	    Set<Character> nt = new LinkedHashSet<>();
+	    for(char ch: str.toCharArray()){
+	        nt.add(ch);
+	    }
+		System.out.println(nt);
+}
+}
